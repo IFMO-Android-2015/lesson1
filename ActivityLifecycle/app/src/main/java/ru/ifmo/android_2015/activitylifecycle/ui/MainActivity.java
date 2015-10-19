@@ -30,17 +30,17 @@ public final class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 clickCount++;
-                udpateUI();
+                updateUI();
             }
         });
 
         if (savedInstanceState != null) {
             clickCount = savedInstanceState.getInt(EXTRA_CLICK_COUNT);
-            udpateUI();
+            updateUI();
         }
     }
 
-    private void udpateUI() {
+    private void updateUI() {
         boolean disabled = clickCount >= MAX_CLICK_COUNT;
         if (disabled) {
             error.setVisibility(View.VISIBLE);
